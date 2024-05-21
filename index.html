@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview App</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #cfe2f3; /* Set a background color for the page */
+        }
+
+        #interview-section {
+            text-align: center;
+            border: 4px solid red; /* Add a border around the question area */
+            padding: 20px; /* Add padding to the question area */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            max-width: 80%; /* Set maximum width for responsiveness */
+        }
+
+        #question-container {
+            margin-bottom: 20px;
+        }
+
+        #speech-output {
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            margin: 0 5px; /* Add some space between buttons */
+            padding: 10px 20px; /* Increase padding */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #start-button {
+            background-color: #007bff; /* Fine-tune the background color for the start button */
+            color: white;
+        }
+
+        #stop-button {
+            background-color: #dc3545; /* Fine-tune the background color for the stop button */
+            color: white;
+        }
+
+        #return-button {
+            background-color: purple; /* Fine-tune the background color for the stop button */
+            color: white;
+            padding: 7px 15px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            #interview-section {
+                max-width: 90%; /* Adjust maximum width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="interview-section">
+        <div id="question-container">
+            <h1>Interview Questions</h1>
+            <div class="button-container">
+                <button id="start-button">Start Interview</button>
+                <button id="stop-button" style="display: none;">Stop Interview</button>
+            </div>
+        </div>
+        <div id="speech-output"></div>
+        <div>
+            <a href="../index.html" id="return-button">Return to Home</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
